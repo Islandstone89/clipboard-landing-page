@@ -85,7 +85,6 @@ textarea:not([rows]) {
 --fw-regular: 400;
 --fw-bold: 600;
 
-/* LAYOUT */
 }
 
 
@@ -103,7 +102,9 @@ a {
 
 p {
     color: var(--clr-grayish-blue);
+    max-width: 70ch;
 }
+
 
 .btn {
     color: var(--clr-white);
@@ -112,7 +113,15 @@ p {
     border: none;
     border-radius: 40px;
     cursor: pointer;
+    width: 100%;
 }
+
+@media(min-width: 40rem) {
+  .btn {
+    width: auto;
+  }
+}
+
 
 .btn:is(:hover, :focus) {
     opacity: .8;
@@ -130,6 +139,21 @@ p {
 
 /* GENERAL STYLING */
 
+/* UTILITIES */
+
+.inline-auto {
+  margin-inline: auto;
+}
+
+.flow {
+  --flow-space: 2em;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+
 body {
     font-family: var(--ff-primary-font);
     font-size: var(--fs-regular);
@@ -138,10 +162,12 @@ body {
 }
 
 
-.logo {
-    margin-inline: auto;
+.main {
+  padding-block: 5rem;
 }
-.laptop {
+
+
+/* .laptop {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -154,27 +180,31 @@ body {
     grid-column: 3 / 4;
     padding-right: 2rem;
     text-align: left;
-}
+} */
 
-.devices {
-    margin-inline: auto;
-}
 
 
 .workflow {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    grid-template-columns: 1fr;
 }
+
 
 .customers {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    place-content: center;
+    /* row-gap: 3rem; */
 }
 
 
 /* FOOTER */
 .footer {
     background-color: var(--clr-light-grey);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    padding-block: 2rem;
 }
 
 .footer-logo {
@@ -188,12 +218,11 @@ body {
 
 .social-media {
     display: flex;
-    gap: 1em;
-    justify-content: flex-end;
+    gap: 1.5em;
+    justify-content: center;
 }
 
 .social-media svg path:hover {
     fill: var(--clr-strong-cyan);
     transition: .25s;
 }
-
