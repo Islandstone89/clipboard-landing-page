@@ -107,7 +107,7 @@ a {
 
 p {
     color: var(--clr-grayish-blue);
-    max-width: 60ch;
+    max-width: 50ch;
 }
 
 .laptop-text-content p,
@@ -115,6 +115,19 @@ p {
   max-width: 25ch;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media(min-width: 50rem) {
+  .buttons {
+    flex-direction: row;    
+  }
+  
+}
 
 .btn {
     color: var(--clr-white);
@@ -149,9 +162,12 @@ p {
 }
 
 
-/* GENERAL STYLING */
-
 /* UTILITIES */
+
+.flow h1 + p,
+.flow h2 + p {
+  margin-top: 1em;
+}
 
 .inline-auto {
   margin-inline: auto;
@@ -175,6 +191,13 @@ p {
   align-items: center;
 }
 
+.mw-none {
+  max-width: none;
+}
+
+
+/* GENERAL STYLING */
+
 body {
     font-family: var(--ff-primary-font);
     font-size: var(--fs-regular);
@@ -194,7 +217,6 @@ body {
     background-size: contain;
   }
 }
-
 
 .main {
   padding-block: 6rem;
@@ -217,7 +239,7 @@ body {
 @media(min-width: 50rem) {
   .laptop {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
   }
   .benefits {
     padding-inline-start: 0;
@@ -226,36 +248,30 @@ body {
 
 /* WORKFLOW */
 
-
-
 .workflow {
   display: grid;
   gap: 3rem;
-  justify-content: center;
 }
 
 @media(min-width: 50rem) {
   .workflow {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
     align-items: center;
     padding-inline: 10rem;
   }
 }
 
-.workflow-content:first-child {
-  padding-top: 1em;
-}
 
 .workflow-content {
   --flow-space: .7em;
   justify-content: center;
   align-items: center;
   margin: 0;
+  height: 100%;
 }
 
 .workflow-content img {
-  width: 30px;
+  height: 2em;
 }
 
 .workflow-content p {
@@ -268,7 +284,6 @@ body {
 
 
 
-
 /* CUSTOMERS */
 
 .customers {
@@ -276,13 +291,13 @@ body {
     display: grid;
     place-content: center;
     gap: 4rem;
-    padding-block-end: 3em;
+    padding-block: 4rem;
 }
 
 @media(min-width: 50rem) {
   .customers {
     grid-template-columns: repeat(5, 1fr);
-    padding-inline: 5rem;
+    padding-inline: 6rem;
   }
   .customers img {
     margin: 0;
@@ -306,6 +321,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding-inline: 5rem;
+    padding-block: 3rem;
   }
 }
 
@@ -318,10 +334,16 @@ body {
     transition: .25s;
 }
 
+@media(min-width: 50rem) {
+  .footer-menu-list {
+    display: flex;
+    gap: 2em;
+  }
+}
+
 .social-media {
     display: flex;
     gap: 1.5em;
-    justify-content: center;
 }
 
 .social-media svg path:hover {
