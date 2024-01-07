@@ -13,17 +13,19 @@
 <body>
 
   <main class="main flow">
-    <div class="intro flow">
+    <div class="intro flow grid">
       <img src="images/logo.svg" alt="Clipboard logo" class="logo inline-auto">
       <h1 class="main-heading">A history of everything you copy</h1>
       <p>Clipboard allows you to track and organize everything you 
         copy. Instantly access your clipboard on all your devices.</p>
-        <button type="button" class="btn btn-ios">Download for iOS</button>
-        <button type="button" class="btn btn-mac">Download for Mac</button>
+        <div class="buttons">
+          <button type="button" class="btn btn-ios">Download for iOS</button>
+          <button type="button" class="btn btn-mac">Download for Mac</button>
+        </div>  <!-- end buttons -->
     </div><!-- end intro -->
 
     <div class="benefits flow-big">
-      <div class="benefits-intro flow">
+      <div class="benefits-intro flow grid">
         <h2>Keep track of your snippets</h2>
         <p>Clipboard instantly stores any item you copy in the cloud, 
           meaning you can access your snippets immediately on all your 
@@ -33,7 +35,7 @@
         <div class="laptop-image">
           <img src="images/image-computer.png" alt="">
         </div> 
-        <div class="laptop-text flow">
+        <div class="laptop-text flow text-length-sm">
 
           <div class="laptop-text-content flow">
             <h2>Quick Search</h2>
@@ -100,7 +102,7 @@
   </main><!-- end main -->
   
   <footer class="footer">
-    <img src="images/logo.svg" alt="Clipboard logo" class="footer-logo inline-auto">
+    <img src="images/logo.svg" alt="Clipboard logo" class="footer-logo">
     <div class="footer-menu">
       <ul class="footer-menu-list">
         <li class="footer-menu-list-item"><a href="#">FAQs</a></li>
