@@ -106,7 +106,12 @@ a {
 }
 
 p {
-    color: var(--clr-grayish-blue);
+  color: var(--clr-grayish-blue);
+}
+
+
+@media(min-width: 50rem) {
+  p {
     max-width: 50ch;
 }
 
@@ -114,6 +119,15 @@ p {
 .workflow-content p {
   max-width: 25ch;
 }
+
+}
+
+h1, h2 {
+  font-weight: var(--fw-bold);
+}
+
+
+
 
 .buttons {
   display: flex;
@@ -165,7 +179,8 @@ p {
 /* UTILITIES */
 
 .flow h1 + p,
-.flow h2 + p {
+.flow h2 + p,
+.flow h3 + p {
   margin-top: 1em;
 }
 
@@ -223,7 +238,7 @@ body {
 }
 
 .main > * {
-  padding-inline: 1rem;
+  padding-inline: 2rem;
 }
 
 /* BENEFITS */
@@ -278,7 +293,7 @@ body {
   margin-block: 0;
 }
 
-.workflow-content h2 {
+.workflow-content h3 {
   margin-block: 1rem;
 }
 
