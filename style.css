@@ -78,8 +78,8 @@ textarea:not([rows]) {
 --clr-light-blue: hsl(233, 100%, 69%);
 
 /* Neutral Colors */
---clr-dark-grayish-blue: hsl(210, 10%, 33%);
---clr-grayish-blue: hsl(201, 11%, 66%);
+--clr-dark-grayish-blue: hsl(212, 10%, 33%);
+--clr-grayish-blue: hsl(202, 11%, 40%);
 --clr-light-grey: hsl(220, 18%, 97%);
 --clr-white: hsl(0, 100%, 100%);
 
